@@ -14,7 +14,6 @@ public class ReflectMain {
 		System.out.println(p.toString());
 		
 		
-		
 		PrivateReflectMethod p1 = new PrivateReflectMethod();
 		Class<? extends PrivateReflectMethod> clazz1 = p1.getClass();
 		Method sayHello = clazz1.getDeclaredMethod("sayHello", new Class[]{String.class});
