@@ -169,8 +169,8 @@ public class NIOComparator {
 
 	public static void main(String[] args) {
 		NIOComparator nio = new NIOComparator();
-		nio.IOMethod("c:\\1.txt");
+		//nio.IOMethod("c:\\1.txt");
 		nio.ByteMethod("c:\\2.txt");
-		nio.mapMethod("c:\\3.txt");
+		//nio.mapMethod("c:\\3.txt");
 	}
 }

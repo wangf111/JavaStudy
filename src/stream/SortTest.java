@@ -1,5 +1,6 @@
 package stream;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,6 +31,12 @@ public class SortTest {
 		 .map(String::toUpperCase)
 		 .peek(e -> System.out.println("Mapped value: " + e))
 		 .collect(Collectors.toList());
+		 
+		 
+		 List<Double> dl = new ArrayList<Double>();
+		 dl.add(new Double(1));
+		 dl.add(new Double(10));
+		 dl.stream().mapToDouble(Double::doubleValue).toArray();//½«List Double×ªdouble[]
 	}
 	
 }
