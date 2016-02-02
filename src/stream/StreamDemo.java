@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
  
@@ -23,7 +24,34 @@ public class StreamDemo {
 // 
 //        iterateStream();
          
-        populaStream();
+        //populaStream();
+    	/*Map<String,Map<String,String>> kk = new HashMap<String,Map<String,String>>();
+    	Map<String,String> kk1 = new HashMap<String, String>();
+    	kk1.put("ddd1", "lo");
+    	kk1.put("ddd2", "lo1");
+    	kk.put("speed", kk1);
+    	Map<String,String> kk2 = new HashMap<String, String>();
+    	kk2.put("ddd3", "lo0");
+    	kk2.put("ddd4", "lo12");
+    	kk.put("direction", kk2);
+    	StringBuffer result = new StringBuffer();
+    	kk.forEach((x1,y1)->{
+    		StringBuffer sb = new StringBuffer();
+    		sb.append(x1+"=");
+    		y1.forEach((x,y)->{
+        		sb.append(x+":"+y+";");
+        	});
+        	result.append(sb.subSequence(0, sb.length()-1)+" ");
+    	});
+    	
+    	System.out.println(result.subSequence(0, result.length()-1));*/
+    	
+    	Function<Integer,Function<Integer,Integer>> makeAdder = x->y->x+y;
+    	Function<Integer, Integer> kk = makeAdder.apply(2);
+    	Integer a = kk.apply(10);
+    	System.out.println(a);
+    	
+    	
     }
  
     //From Arrays
